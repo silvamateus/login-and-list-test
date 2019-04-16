@@ -23,6 +23,8 @@ module.exports = {
                             importLoaders: 1,
                             modules: true,
                             localIdentName: '[name]_[local]_[hash:base64]',
+                            sourceMap: true,
+                            minimize: true,
                         },
                     },
                     'postcss-loader',

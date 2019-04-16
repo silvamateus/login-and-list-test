@@ -1,6 +1,6 @@
+const autoprefixer = require('autoprefixer');
+const postcssNesting = require('postcss-nesting');
+
 module.exports = {
-    parser: 'sugarss',
-    plugins: {
-        autoprefixer: {},
-    },
+    plugins: [autoprefixer, postcssNesting(/* pluginOptions */)],
 };
