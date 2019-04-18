@@ -8,6 +8,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
+    "heroku": "webpack -p --progress && node server.js",
     "fix-code": "prettier-eslint --write 'src/**/*.{js,jsx}' ",
     "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}' "
   },
@@ -36,6 +37,7 @@
   "dependencies": {
     "eslint": "^5.16.0",
     "eslint-plugin-react": "^7.12.4",
+    "express": "^4.16.4",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
