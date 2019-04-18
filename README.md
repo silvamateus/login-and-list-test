@@ -10,3 +10,7 @@
 
 > run `fix-code` to lint js with prettier and eslint\
 > run `fix-syles` to lint css with stylelint
+
+# Heroku
+
+Project deployer to heroku in the following link https://jexperts-test-silvamateus.herokuapp.com/
