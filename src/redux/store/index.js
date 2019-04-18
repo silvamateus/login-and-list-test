@@ -1,6 +1,5 @@
 import { createStore } from 'redux';
 import rootReducer from '../reducers';
-import { getUsers } from '../actions/userRegister';
 
 const initialState = {
   users: [],

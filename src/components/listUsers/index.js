@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import style from './style.css';
 
 class ListUsers extends Component {
   constructor(props) {
@@ -13,19 +13,24 @@ class ListUsers extends Component {
     users.splice(index, 1);
     this.setState({ users: users });
   };
+
   render() {
     return (
-      <div className="d-flex-column ml-3 py-3">
+      <div className="d-flex-column p-3">
         <button
           onClick={event => this.props.onClick(true)}
-          className="btn btn-primary mb-3 ml-2"
+          className="btn btn-primary"
         >
           Voltar
         </button>
-        <div className="d-flex pl-2">
+        <div className={`d-flex flex-wrap ${style.cardNegativeMargin}`}>
           {this.state.users.map((user, index) => (
-            <div key={user.id} className="card mb-2" style={{ width: '18rem' }}>
-              <div className=" card-body px-3">
+            <div
+              key={user.id}
+              className={`card ${style.cardMargin}`}
+              style={{ width: '18rem' }}
+            >
+              <div className={`card-body px-3 `}>
                 <div className="d-flex mb-3">
                   <div className="ml-auto">
                     <button
@@ -65,8 +70,6 @@ class ListUsers extends Component {
     );
   }
 }
-
-ListUsers.propTypes = {};
 
 const mapStateToProps = state => {
   return {
